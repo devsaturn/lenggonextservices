@@ -1,0 +1,10 @@
+.footer_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center
+}
+
+.footer_powerBy {
+    font-weight: bold
+}
