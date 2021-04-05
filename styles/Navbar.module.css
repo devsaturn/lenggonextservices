@@ -1,3 +1,27 @@
-.nav{
-    padding: .2rem
+.nav {
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  justify-items: center;
+}
+
+.description {
+  text-align: center;
+  font-size: 24px;
 }

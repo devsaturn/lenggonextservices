@@ -8,26 +8,24 @@ import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa'
 
 
 function Fondateur() {
+    const sloganPhrase1 = "L\’innovation sociale et l\’humain au centre des solutions,"
+    const sloganPhrase2 = "en favorisant l\’égalité des chances et de traitement"
+
+
     return (
         <div>
-            <Card>
-                <CardActionArea>
-                    <Typography gutterBottom variant="h5" component="h2">
-                    Fondateur : 
+            
+                    <Typography variant="subtitle1" color="textSecondary" component="h2">
+                    <FaQuoteLeft size={20} color={"#FF4D4F"}/>   
+                            {sloganPhrase1}
                     </Typography>
-                    
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        <FaQuoteLeft size={40} color={"#FF4D4F"}/>
-                            <span>
-                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                            across all continents except Antarctica
-
-                            </span>
-                        <FaQuoteRight size={40} color={"#FF4D4F"}/>
-
+                    <br/>
+                    <Typography variant="subtitle1" color="textSecondary" component="h2">
+                        
+                            {sloganPhrase2}
+                            <FaQuoteRight size={20} color={"#FF4D4F"}/>
                     </Typography>
-                </CardActionArea>
-            </Card>
+        
         </div>
 
     )

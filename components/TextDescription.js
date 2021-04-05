@@ -7,7 +7,7 @@ function TextDescription() {
             <div className="typewriter">
                 <h3>Vous êtes{'  '}<Typewriter
                     options={{
-                        strings: ['Donneur d\'ordres ?', 'Maîtrise d\'ouvrage ?', 'Entreprise titulaire ?'],
+                        strings: ['donneur d\'ordres ?', 'maîtrise d\'ouvrage ?', 'maîtrise d\'œuvre ?','entreprise titulaire ?'],
                         autoStart: true,
                         loop: true,
                     }}

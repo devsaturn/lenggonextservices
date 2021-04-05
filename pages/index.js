@@ -6,6 +6,9 @@ import Prestation from '../components/Prestation'
 import References from '../components/References'
 import Fondateur from '../components/Fondateur'
 import Footer from '../components/Footer'
+import Expert from '../components/Expert'
+import Atouts from '../components/Atouts'
+import ContactForm from '../components/ContactForm'
 
 export default function Home() {
   const [prestations, setPrestation] = useState([])
@@ -36,8 +39,10 @@ export default function Home() {
     }
   ]
 
+
   useEffect(() => {
     setPrestation(dataPrestations)
+  
 
   }, [])
   
@@ -50,13 +55,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Bienvenu.e chez Lenggo
-        </h1>
-
-        <p className={styles.description}>
-          <TextDescription/>
-        </p>
+        
 
         <div className={styles.grid}>
           <section className={styles.prestation}>
@@ -66,12 +65,14 @@ export default function Home() {
             
           </section>
           <section>
-            <Fondateur/>
+            <Atouts/>
           </section>
           <section>
-            {/* <References/> */}
+            <Expert/>
           </section>
-
+          <section>
+            <ContactForm/>
+          </section>
 
         </div>
       </main>
