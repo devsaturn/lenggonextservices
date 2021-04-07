@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import Typography from '@material-ui/core/Typography';
+import { Parallax } from 'react-scroll-parallax';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,11 +30,13 @@ function Expert() {
 
     return (
         <div className={classes.root}>
-            <Typography gutterBottom variant="h5" color="textSecondary" component="h2" align="center">
-                Les références de notre expert     
-            </Typography>
-
-            <GridList cellHeight={120}  cols={8} className={classes.gridList}>
+            <Parallax y={[-20, -60]} tagOuter="figure">
+                <Typography gutterBottom variant="h5" color="textSecondary" component="h2" align="center">
+                    Les références de notre expert     
+                </Typography>
+            </Parallax>
+            <Parallax y={[0, -40]} tagOuter="figure" className={classes.gridList}>
+            <GridList cellHeight={120}  cols={8} >
                 <GridListTile cols={1} style={{height:'80px', margin:'2px'}}>
                     <img src="/references/bouyguesUniversityWB.png" alt="bouyguesUniversity"
                     style={{width: '120px', height:'80px'}}/>
@@ -44,7 +47,7 @@ function Expert() {
                 </GridListTile>
                 <GridListTile cols={1} style={{height:'80px', margin:'4px'}}>
                     <img src="/references/eptbWB.png" alt="eptb"
-                    style={{width: '130px', height:'60px', marginTop:'10px'}}/>
+                    style={{width: '150px', height:'60px', marginTop:'10px'}}/>
                 </GridListTile>
                 <GridListTile cols={1} style={{height:'80px', margin:'4px'}}>
                     <img src="/references/gpamWB.png" alt="gpam"
@@ -81,6 +84,7 @@ function Expert() {
 
 
             </GridList>
+            </Parallax>
         </div>
     )
 }

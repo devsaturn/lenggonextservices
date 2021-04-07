@@ -11,18 +11,21 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import CheckIcon from '@material-ui/icons/Check';
 import styles from '../styles/Home.module.css'
+import { Parallax } from 'react-scroll-parallax';
+
 
 function Atouts() {
     return (
         <div className={styles.atouts}>
             <Paper elevation={0}>
-                <div className={styles.cardTitle}>
-                <FcOrgUnit size={30}/>
-                    <Typography variant="h6" color="textSecondary" component="h6">
-                    Une démarche singulière
-                    </Typography>
+                <Parallax y={[-20, -60]} tagOuter="figure" className={styles.cardTitle}>
+                    <FcOrgUnit size={30}/>
+                        <Typography variant="h6" color="textSecondary" component="h6">
+                        Une démarche singulière
+                        </Typography>
+                </Parallax>
+                <Parallax y={[0, -40]} tagOuter="figure">
 
-                </div>
                     <List component="nav" aria-label="main mailbox folders">
                         <ListItem>
                         <ListItemIcon>
@@ -43,16 +46,16 @@ function Atouts() {
                             <ListItemText primary="Mobilisation des opérations locaux et permettre un ancrage territorial" />
                         </ListItem>
                     </List>
-
+                </Parallax>
             </Paper>
             <Paper elevation={0}>
-                <div className={styles.cardTitle}>
-                <GrSearchAdvanced size={30} color={"#40a9ff"}/>
-                <Typography variant="h6" color="textSecondary" component="h6">
-                    Nos atouts
-                    </Typography>
-
-                </div>
+                <Parallax y={[-20, -60]} tagOuter="figure" className={styles.cardTitle}>
+                    <GrSearchAdvanced size={30} color={"#40a9ff"}/>
+                    <Typography variant="h6" color="textSecondary" component="h6">
+                        Nos atouts
+                        </Typography>
+                </Parallax>
+                <Parallax y={[0, -40]} tagOuter="figure">
                     <List component="nav" aria-label="main mailbox folders">
                         <ListItem>
                         <ListItemIcon>
@@ -73,7 +76,7 @@ function Atouts() {
                             <ListItemText primary="La France comme terrain d'action" />
                         </ListItem>
                     </List>
-
+                </Parallax>
             </Paper>
         </div>
     )
