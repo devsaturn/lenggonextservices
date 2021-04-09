@@ -7,7 +7,12 @@ import Expert from '../components/Expert'
 import Atouts from '../components/Atouts'
 import { Parallax } from 'react-scroll-parallax';
 import {motion} from 'framer-motion'
+import firebaseInit from '../firebase'
 
+
+
+
+firebaseInit()
 
 export default function Home() {
   const [prestations, setPrestation] = useState([])
@@ -41,7 +46,6 @@ export default function Home() {
   useEffect(() => {
     setPrestation(dataPrestations)
     
-
   }, [])
   
 

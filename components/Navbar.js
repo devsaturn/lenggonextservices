@@ -18,7 +18,7 @@ export default function Navbar() {
   
 
     return (
-        <div>
+        <div className={styles.container}>
         <div className={styles.nav}>
             <Link href="/"><Image src="/logoCarre.png" width={60} height={60}/></Link>
             <h1 className={styles.title}>Bienvenu.e chez Lenggo</h1>
